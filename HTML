@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> BTSImage Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+
+  <!-- Filter Buttons  : container for all the filtering buttons-->
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All BTS MEMBER</button>
+    <button onclick="filterImages('jungkook')">JUNGKOOK</button>
+    <button onclick="filterImages('suga')">SUGA</button>
+    <button onclick="filterImages('rm')">RM</button>
+    <button onclick="filterImages('kimsoekjin')">KIM SEOK JIN</button>
+    <button onclick="filterImages('kimtaehung')">TAEHUNG</button>
+    <button onclick="filterImages('parkjimin')">PARK JIMIN</button>
+    <button onclick="filterImages('jhope')">J-HOPE</button>
+  </div>
+
+  <!--  BTS IMAGES Gallery :contains all images of bts memeber -->
+  <div class="gallery">
+    <div class="gallery-item jungkook">
+      <img src="jk2.jpg" alt="JUNGKOOK 1" onclick="openLightbox(0)">
+    </div>
+    <div class="gallery-item suga">
+      <img src="SUGA1.webp" alt="SUGA 1" onclick="openLightbox(1)">
+    </div>
+    <div class="gallery-item jungkook">
+      <img src="jk1.jpg" alt="JUNGKOOK 2" onclick="openLightbox(2)">
+    </div>
+    <div class="gallery-item suga">
+      <img src="SUGA2.webp" alt="SUGA 2" onclick="openLightbox(3)">
+    </div>
+    <div class="gallery-item rm">
+      <img src="rm1.webp" alt="RM1" onclick="openLightbox(4)">
+    </div>
+    <div class="gallery-item rm">
+      <img src="rm2.jpg" alt="RM2" onclick="openLightbox(5)">
+    </div>
+    <div class="gallery-item jhope">
+      <img src="jhope.jpg" alt="J-HOPE" onclick="openLightbox(6)">
+    </div>
+    <div class="gallery-item kimsoekjin">
+      <img src="jin.webp" alt="JIN" onclick="openLightbox(7)">
+    </div>
+    <div class="gallery-item kimtaehung">
+      <img src="v.jpg" alt="V" onclick="openLightbox(8)">
+    </div>
+    <div class="gallery-item parkjimin">
+      <img src="jimin.webp" alt="JIMIN" onclick="openLightbox(9)">
+    </div>
+  </div>
+
+  <!-- Lightbox  a pop up that and enlarged version of the selected image.-->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    <a class="prev" onclick="changeImage(-1)">❮</a>
+    <a class="next" onclick="changeImage(1)">❯</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
